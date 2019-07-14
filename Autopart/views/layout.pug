@@ -1,0 +1,45 @@
+﻿doctype html
+html(ng-app='autopart')
+  head
+    <base href="/">
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='keywords', content='autoparts, auto parts, auto-parts, car accessories, spark plug, engine, belt, tyres, ')
+    meta(name='description', content='E-Commerce website for autoparts')
+    meta(name='author', content='UTD|A&J|CS6314.003')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-resource.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-aria.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-animate.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-cookies.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-loader.js')  
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.js')  
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular-file-upload/2.5.0/angular-file-upload.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.4.5/angular-sanitize.js')
+    script(src='https://rawgit.com/dwmkerr/angular-modal-service/master/dst/angular-modal-service.js')
+    script(src='https://raw.githubusercontent.com/michaelbromley/angularUtils/master/src/directives/pagination/dirPagination.js')
+    script(src='https://www.promisejs.org/polyfills/promise-6.1.0.js')
+    script(data-require='ui-router@0.2.12', data-semver='0.2.15', src='//rawgit.com/angular-ui/ui-router/0.2.15/release/angular-ui-router.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1', crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM', crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js')
+
+    script(src='/javascripts/autopart.js')
+    script(src='/javascripts/dirPagination.js')
+    script(src='/javascripts/ng-file-upload.js')
+    //script(src='ng-file-upload-shim(.min).js') 
+    //script(src='ng-file-upload(.min).js')
+    link(href='https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T', crossorigin='anonymous')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.0.8/css/all.css')
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    link(rel='stylesheet', href='/stylesheets/form.css')
+    link(rel='shortcut icon', type='image/png', href='images/sw-1.png')
+    title= title
+
+  body
+    block content
+    include footer

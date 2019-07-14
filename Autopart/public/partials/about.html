@@ -1,0 +1,44 @@
+﻿<body>
+    <header>
+        <a href="/#/"><img class="img-left" src="images/logo.png" /></a>
+    </header>
+    <nav class="navbar navbar-expand-sm navbar-light">
+
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsingNavbar4"><span class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse collapse" id="collapsingNavbar4">
+            <ul class="navbar-nav ml-auto">
+                <li ng-if="validUser==true" class="user-info">Welcome, {{currentUser}} |</li>
+                <li class="nav-item"><a class="nav-link" href="/#/">Home</a></li>
+                <li ng-if="validUser==false" class="nav-item"><a class="nav-link" href="/#/signUp">Sign Up</a></li>
+                <li ng-if="validUser==false" class="nav-item"><a class="nav-link" href="/#/signIn">Sign In</a></li>
+                <li ng-if="validUser==true&&admin==false" class="nav-item"><a class="nav-link" href="/#/Cart">My Cart</a></li>
+                <li ng-if="validUser==true&&admin==false" class="nav-item"><a class="nav-link" href="/#/Orders">My Orders</a></li>
+                <li ng-if="validUser==true" class="nav-item"><a class="nav-link" href="" ng-click="logout()">Signout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="container">
+            <h4>About the website</h4>
+            <hr />
+            <p>This website is an academic project to show the working of 
+                a MEAN stack application. It allows the users to sign in as customers, 
+                browse products using different filters and add these items to cart. 
+                An admin user can also log in and update the inventory as and when needed.</p>
+            <p>All rights reserved to the original owners.</p>
+            <p></p>
+            <h4>References</h4>
+            <hr />
+            <p>
+                <ul>
+                    <li><a href="https://www.pacificautocenter.com/parts" target="_blank">Auto Parts Department in Fontana, CA | Pacific Auto Center</a> </li>
+                    <li><a href="https://stock.adobe.com/ee/search?filters%5Bcontent_type%3Aimage%5D=1&filters%5Bcontent_type%3Aillustration%5D=1&filters%5Bcontent_type%3Aphoto%5D=1&filters%5Bcontent_type%3Azip_vector%5D=1&similar_content_id=125699878&find_similar_by=composition" target="_blank">Adobe Stock Image | High quality stock images.‎</a></li>
+                    <li><a href="https://hatchful.shopify.com/" target="_blank">Hatchful - Shopify</a> </li>
+                    <li><a href="https://www.autozone.com/parts" target="_blank">AutoZone Auto Parts - Buy Online or in a Store Near You</a> </li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+</body>

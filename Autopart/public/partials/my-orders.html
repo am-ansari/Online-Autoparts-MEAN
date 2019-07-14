@@ -1,0 +1,103 @@
+﻿
+<body ng-controller="OrdersCtrl">
+    <header>
+        <a href="/#/"><img class="img-left" src="images/logo.png" /></a>
+    </header>
+    <nav class="navbar navbar-expand-sm navbar-light">
+
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsingNavbar4"><span class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse collapse" id="collapsingNavbar4">
+            <ul class="navbar-nav ml-auto">
+                <li ng-if="validUser==true" class="user-info">Welcome, {{currentUser}} |</li>
+                <li class="nav-item"><a class="nav-link" href="/#/">Home</a></li>
+                <li ng-if="validUser==false" class="nav-item"><a class="nav-link" href="/#/signUp">Sign Up</a></li>
+                <li ng-if="validUser==false" class="nav-item"><a class="nav-link" href="/#/signIn">Sign In</a></li>
+                <li ng-if="validUser==true&&admin==false" class="nav-item"><a class="nav-link" href="/#/Cart">My Cart</a></li>
+                <li ng-if="validUser==true&&admin==false" class="nav-item"><a class="nav-link" href="/#/Orders">My Orders</a></li>
+                <li ng-controller="HomeCtrl" ng-if="validUser==true" class="nav-item"><a class="nav-link" href="" ng-click="logout()">Signout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <h1 class="my-4">Autoparts</h1>
+                <p>Your one-stop shop</p>
+                <hr />
+            </div>
+            <div class="col-lg-9">
+
+                <h1>My Orders</h1>
+                <hr />
+                <div class="row">
+
+                    <div class="order-header" ng-repeat="order in orders">
+                            <div class="order-title" ng-click="ord$index = ord$index?false:true">
+                                <h4>Order ID: {{order._id.substring(8,17).toUpperCase()}}</h4>
+                                <h5>Date: {{order.orderTime}}</h5>
+                            </div>
+                        <div ng-if="ord$index">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Quantity</th>
+                                        <th class="text-center">Price</th>
+                                        <th class="text-center">Total</th>
+                                        <th> </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="item in order.items">
+                                        <td class="col-sm-8 col-md-6">
+                                            <div class="media">
+                                                <a class="thumbnail pull-left" href="#"> <img class="media-object" src="../images/prod-images/{{item.part_no}}.JPG" style="width: 72px; height: 72px;"> </a>
+                                                <div class="media-body">
+                                                    <div class="cart-item">
+                                                        {{ item.name }}<br />
+                                                        Part Number: {{ item.part_no }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="col-sm-3 col-md-3 text-center">
+                                            <input class="form-control cart-quantity" type="text" id="InputQuantity" value={{ item.count }} ng-model="item.count" disabled>
+                                        </td>
+                                        <td class="col-sm-3 col-md-3 text-center">${{ item.price }}</td>
+                                        <td class="col-sm-3 col-md-3 text-center">${{ formatNumber(item.price * item.count) }}</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>   </td>
+                                        <td>   </td>
+                                        <td>   </td>
+                                        <td><h5>Subtotal</h5></td>
+                                        <td class="text-right"><h5><strong>${{formatNumber(order.subtotal)}}</strong></h5></td>
+                                    </tr>
+                                    <tr>
+                                        <td>   </td>
+                                        <td>   </td>
+                                        <td>   </td>
+                                        <td><h5>Estimated shipping</h5></td>
+                                        <td class="text-right"><h5><strong>${{formatNumber(order.estimatedshipping)}}</strong></h5></td>
+                                    </tr>
+                                    <tr>
+                                        <td>   </td>
+                                        <td>   </td>
+                                        <td>   </td>
+                                        <td><h3>Total</h3></td>
+                                        <td class="text-right"><h3><strong>${{formatNumber(order.totalPurchase)}}</strong></h3></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+</div>
+
+                </div>
+
+                <a href="/#/" value="Yes" class="btn btn-primary"> Return </a>
+            </div>
+        </div>
+    </div>
+</body>

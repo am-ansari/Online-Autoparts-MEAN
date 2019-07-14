@@ -1,0 +1,82 @@
+﻿<body>
+    <header>
+        <a href="/#/"><img class="img-left" src="images/logo.png" /></a>
+    </header>
+    <nav class="navbar navbar-expand-sm navbar-light">
+
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsingNavbar4"><span class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse collapse" id="collapsingNavbar4">
+            <ul class="navbar-nav ml-auto">
+                <li ng-if="validUser==true" class="user-info">Welcome, {{currentUser}} |</li>
+                <li class="nav-item"><a class="nav-link" href="/#/">Home</a></li>
+                <li ng-if="validUser==false" class="nav-item"><a class="nav-link" href="/#/signUp">Sign Up</a></li>
+                <li ng-if="validUser==false" class="nav-item"><a class="nav-link" href="/#/signIn">Sign In</a></li>
+                <li ng-if="validUser==true&&admin==false" class="nav-item"><a class="nav-link" href="/#/Cart">My Cart</a></li>
+                <li ng-if="validUser==true&&admin==false" class="nav-item"><a class="nav-link" href="/#/Orders">My Orders</a></li>
+                <li ng-if="validUser==true" class="nav-item"><a class="nav-link" href="" ng-click="logout()">Signout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="container">
+            <article class="card-body mx-auto" style="max-width: 400px;">
+                <h4 class="text-center">Create Account</h4>
+                <hr />
+                <form>
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                        </div>
+                        <input name="" class="form-control" placeholder="Username" type="text" ng-model="user.username">
+                        <div class="sign-up-error" ng-if="usernameErrMsg">{{usernameErrMsg}}</div>
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                        </div>
+                        <input name="" class="form-control" placeholder="Full name" type="text" ng-model="user.fullname">
+                        <div class="sign-up-error" ng-if="fullnameErrMsg">{{fullnameErrMsg}}</div>
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                        </div>
+                        <input name="" class="form-control" placeholder="Email address" type="email" ng-model="user.email">
+                        <div class="sign-up-error" ng-if="emailErrMsg">{{emailErrMsg}}</div>
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                        </div>
+                        <input name="" class="form-control" placeholder="Phone number" type="text" ng-model="user.phone">
+                        <div class="sign-up-error" ng-if="phoneErrMsg">{{phoneErrMsg}}</div>
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+                        </div>
+                        <input name="" class="form-control" placeholder="Address" type="text" ng-model="user.address">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                        </div>
+                        <input class="form-control" placeholder="Create password" type="password" ng-model="user.password">
+                        <div class="sign-up-error" ng-if="pwdErrMsg">{{pwdErrMsg}}</div>
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                        </div>
+                        <input class="form-control" placeholder="Confirm password" type="password" ng-model="user.confirmpassword">
+                        <div class="sign-up-error" ng-if="cnfPwdErrMsg">{{cnfPwdErrMsg}}</div>
+                    </div> <!-- form-group// -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block" ng-click="submit()"> Sign Up  </button>
+                    </div> <!-- form-group// -->
+                    <p class="text-center">Have an account? <a href="/#/signIn">Log In</a> </p>
+                </form>
+            </article>
+        </div> <!-- card.// -->
+    </div>
+</body>

@@ -1,0 +1,23 @@
+﻿header
+  a(href='/#/')
+    img.img-left(src='images/logo.png')
+nav.navbar.navbar-expand-sm.navbar-light(ng-controller='HomeCtrl')
+  button.navbar-toggler.ml-auto(type='button', data-toggle='collapse', data-target='#collapsingNavbar4')
+    span.navbar-toggler-icon
+  #collapsingNavbar4.navbar-collapse.collapse
+    ul.navbar-nav.ml-auto
+      li.user-info(ng-if='validUser==true') Welcome, {{currentUser}} |
+      li.nav-item
+        a.nav-link(href='/#/') Home
+      li.nav-item(ng-if='validUser==false')
+        a.nav-link(href='/#/signUp') Sign Up
+      li.nav-item(ng-if='validUser==false')
+        a.nav-link(href='/#/signIn') Sign In
+      li.nav-item(ng-if='validUser==true&&admin==false')
+        a.nav-link(href='/#/Cart') My Cart
+      li.nav-item(ng-if='validUser==true&&admin==false')
+        a.nav-link(href='/#/Orders') My Orders
+      li.nav-item(ng-if='validUser==true')
+        a.nav-link(href='', ng-click='logout()') Signout
+      li.nav-item
+        a.nav-link(href='/#/about') About

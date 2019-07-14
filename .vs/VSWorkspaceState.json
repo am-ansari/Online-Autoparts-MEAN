@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Autopart",
+    "\\Autopart\\public",
+    "\\Autopart\\public\\javascripts",
+    "\\Autopart\\public\\partials",
+    "\\Autopart\\public\\stylesheets",
+    "\\Autopart\\routes",
+    "\\Autopart\\views"
+  ],
+  "SelectedNode": "\\Autopart\\public\\javascripts\\autopart.js",
+  "PreviewInSolutionExplorer": false
+}

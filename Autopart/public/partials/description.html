@@ -1,0 +1,84 @@
+﻿
+<body ng-controller="ViewProductCtrl">
+    <header>
+        <a href="/#/"><img class="img-left" src="images/logo.png" /></a>
+    </header>
+    <nav class="navbar navbar-expand-sm navbar-light">
+
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsingNavbar4"><span class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse collapse" id="collapsingNavbar4">
+            <ul class="navbar-nav ml-auto">
+                <li ng-if="validUser==true" class="user-info">Welcome, {{currentUser}} |</li>
+                <li class="nav-item"><a class="nav-link" href="/#/">Home</a></li>
+                <li ng-if="validUser==false" class="nav-item"><a class="nav-link" href="/#/signUp">Sign Up</a></li>
+                <li ng-if="validUser==false" class="nav-item"><a class="nav-link" href="/#/signIn">Sign In</a></li>
+                <li ng-if="validUser==true&&admin==false" class="nav-item"><a class="nav-link" href="/#/Cart">My Cart</a></li>
+                <li ng-if="validUser==true&&admin==false" class="nav-item"><a class="nav-link" href="/#/Orders">My Orders</a></li>
+                <li ng-if="validUser==true" class="nav-item"><a class="nav-link" href="" ng-click="logout()">Signout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <h1 class="my-4">Autoparts</h1>
+                <p>Your one-stop shop</p>
+                <hr />
+            </div>
+            <div class="col-lg-9">
+                <ul class="breadcrumb-list">
+
+                    <li>
+                        <button class="btn breadcrumb-btn"><i class="glyphicon glyphicon-home"></i> Home</button>
+                    </li>
+                    <li>
+                        <button class="btn breadcrumb-btn">
+                            {{item.main_category}}
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn breadcrumb-btn">
+                            {{item.sub_category_1}}
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn breadcrumb-btn">
+                            {{item.sub_category_2}}
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn breadcrumb-btn-item">
+                            {{item.name}}
+                        </button>
+
+                    </li>
+                </ul>
+                <h1>Item Description</h1>
+                <div class="row">
+
+                    <div class="col-4">
+                        <img class="desc-img" src="../images/prod-images/{{item.part_no.trim()}}.JPG"
+                             alt="Image of product from {{ item.sub_category_2 }} category">
+                    </div>
+                    <div class="col-8">
+                        <ul>
+                            <li>Title: {{item.name}}</li>
+                            <li>Part Number: {{item.part_no}}</li>
+                            <li>Weight: {{item.weight}}</li>
+                            <li>Shape: {{item.shape}}</li>
+                            <li>Features: <pre>{{item.features}}</pre> </li>
+                            <li ng-if="item.quantity>0">Availability: In-stock</li>
+                            <li ng-if="item.quantity==0">Availability: Out of stock</li>
+                            <li></li>
+                            <li></li>
+                            <li>Quantity: {{item.quantity}}</li>
+                            <li>Price: ${{item.price}}</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="/#/" value="Yes" class="btn btn-primary"> Return </a>
+            </div>
+        </div>
+    </div>
+</body>

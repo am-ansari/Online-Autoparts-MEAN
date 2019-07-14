@@ -1,0 +1,270 @@
+﻿<body>
+    <header>
+        <a href="/#/"><img class="img-left" src="images/logo.png" /></a>
+    </header>
+    <nav class="navbar navbar-expand-sm navbar-light">
+
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsingNavbar4"><span class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse collapse" id="collapsingNavbar4">
+            <ul class="navbar-nav ml-auto">
+                <li ng-if="validUser==true" class="user-info">Welcome, {{currentUser}} |</li>
+                <li class="nav-item"><a class="nav-link" href="/#/">Home</a></li>
+                <li ng-if="validUser==false" class="nav-item"><a class="nav-link" href="/#/signUp">Sign Up</a></li>
+                <li ng-if="validUser==false" class="nav-item"><a class="nav-link" href="/#/signIn">Sign In</a></li>
+                <li ng-if="validUser==true&&admin==false" class="nav-item"><a class="nav-link" href="/#/Cart">My Cart</a></li>
+                <li ng-if="validUser==true&&admin==false" class="nav-item"><a class="nav-link" href="/#/Orders">My Orders</a></li>
+                <li ng-controller="HomeCtrl" ng-if="validUser==true" class="nav-item"><a class="nav-link" href="" ng-click="logout()">Signout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" ng-controller="HomeCtrl">
+        <div class="row">
+            <div class="col-lg-3">
+                <h1 class="my-4">Autoparts</h1>
+                <p>Your one-stop shop</p>
+                <hr />
+            </div>
+            <div class="col-lg-9">
+                <h2>Cart</h2>
+                <hr />
+                <div ng-if="emptyCart==true">
+                    <p> Your shopping cart is empty! </p>
+                </div>
+                <div ng-if="emptyCart==false">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th class="text-center">Price</th>
+                                <th class="text-center">Total</th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in cart">
+                                <td class="col-sm-8 col-md-6">
+                                    <div class="media">
+                                        <a class="thumbnail pull-left" href="#"> <img class="media-object" src="../images/prod-images/{{item.part_no}}.JPG" style="width: 72px; height: 72px;"> </a>
+                                        <div class="media-body">
+                                            <div class="cart-item">
+                                                {{ item.name }}<br />
+                                                Part Number: {{ item.part_no }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="col-sm-4 col-md-4 text-center">
+                                    <button class="btn"><img class="cart-incr-img" src="../images/plus.png" alt="Increase count image" ng-click="addItemToCart(item)" /></button>
+                                    <input class="form-control cart-quantity" type="text" id="InputQuantity" value={{ item.count }} ng-model="item.count" disabled>
+                                    <button class="btn"><img class="cart-incr-img" src="../images/minus.png" alt="Decrease count image" ng-click="removeItemCart(item)" /></button>
+
+                                </td>
+                                <td class="col-sm-1 col-md-1 text-center"><strong>${{ item.price }}</strong></td>
+                                <td class="col-sm-1 col-md-1 text-center"><strong>${{ formatNumber(item.price * item.count) }}</strong></td>
+                                <td class="col-sm-1 col-md-1">
+                                    <button type="button" class="btn btn-danger" ng-click="removeItemCart(item)">
+                                        <span class="glyphicon glyphicon-remove"></span> Remove
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>   </td>
+                                <td>   </td>
+                                <td>   </td>
+                                <td><h5>Subtotal</h5></td>
+                                <td class="text-right"><h5><strong>${{formatNumber(totalAmount)}}</strong></h5></td>
+                            </tr>
+                            <tr>
+                                <td>   </td>
+                                <td>   </td>
+                                <td>   </td>
+                                <td><h5>Estimated shipping</h5></td>
+                                <td class="text-right"><h5><strong>${{formatNumber(0.05*totalAmount)}}</strong></h5></td>
+                            </tr>
+                            <tr>
+                                <td>   </td>
+                                <td>   </td>
+                                <td>   </td>
+                                <td><h3>Total</h3></td>
+                                <td class="text-right" ng-model="totalAmount"><h3><strong>${{formatNumber(totalAmount + 0.05*totalAmount)}}</strong></h3></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div ng-if="emptyCart==false" class="col-md-8 order-md-1">
+                    <h4 class="mb-3">Billing address</h4>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName">Full name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="" value="{{currentUser}}" required>
+                            <div class="invalid-feedback">
+                                Valid name is required.
+                            </div>
+                        </div>
+                       
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                        <input type="email" class="form-control" id="email" placeholder="you@example.com" value="{{userEmail}}">
+                        <div class="invalid-feedback">
+                            Please enter a valid email address for shipping updates.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                        <div class="invalid-feedback">
+                            Please enter your shipping address.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+                        <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5 mb-3">
+                            <label for="country">Country</label>
+                            <select class="custom-select d-block w-100" id="country" disabled>
+                                <option value="United States">United States</option>
+                            </select>
+
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="state">State</label>
+                            <select class="custom-select d-block w-100" id="state" required>
+                                <option value="">Choose...</option>
+                                <option>Alabama - AL</option>
+                                <option>Alaska - AK</option>
+                                <option>Arizona - AZ</option>
+                                <option>Arkansas - AR</option>
+                                <option>California - CA</option>
+                                <option>Colorado - CO</option>
+                                <option>Connecticut - CT</option>
+                                <option>Delaware - DE</option>
+                                <option>Florida - FL</option>
+                                <option>Georgia - GA</option>
+                                <option>Hawaii - HI</option>
+                                <option>Idaho - ID</option>
+                                <option>Illinois - IL</option>
+                                <option>Indiana - IN</option>
+                                <option>Iowa - IA</option>
+                                <option>Kansas - KS</option>
+                                <option>Kentucky - KY</option>
+                                <option>Louisiana - LA</option>
+                                <option>Maine - ME</option>
+                                <option>Maryland - MD</option>
+                                <option>Massachusetts - MA</option>
+                                <option>Michigan - MI</option>
+                                <option>Minnesota - MN</option>
+                                <option>Mississippi - MS</option>
+                                <option>Missouri - MO</option>
+                                <option>Montana - MT</option>
+                                <option>Nebraska - NE</option>
+                                <option>Nevada - NV</option>
+                                <option>New Hampshire - NH</option>
+                                <option>New Jersey - NJ</option>
+                                <option>New Mexico - NM</option>
+                                <option>New York - NY</option>
+                                <option>North Carolina - NC</option>
+                                <option>North Dakota - ND</option>
+                                <option>Ohio - OH</option>
+                                <option>Oklahoma - OK</option>
+                                <option>Oregon - OR</option>
+                                <option>Pennsylvania - PA</option>
+                                <option>Rhode Island - RI</option>
+                                <option>South Carolina - SC</option>
+                                <option>South Dakota - SD</option>
+                                <option>Tennessee - TN</option>
+                                <option>Texas - TX</option>
+                                <option>Utah - UT</option>
+                                <option>Vermont - VT</option>
+                                <option>Virginia - VA</option>
+                                <option>Washington - WA</option>
+                                <option>West Virginia - WV</option>
+                                <option>Wisconsin - WI</option>
+                                <option>Wyoming - WY</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please provide a valid state.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="zip">Zip</label>
+                            <input type="text" class="form-control" id="zip" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Zip code required.
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mb-4">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="same-address" checked disabled>
+                        <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+                    </div>
+                    <hr class="mb-4">
+
+                    <h4 class="mb-3">Payment</h4>
+
+                    <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                            <label class="custom-control-label" for="credit">Credit card</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                            <label class="custom-control-label" for="debit">Debit card</label>
+                        </div>
+                      
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="cc-name">Name on card</label>
+                            <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                            <small class="text-muted">Full name as displayed on card</small>
+                            <div class="invalid-feedback">
+                                Name on card is required
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="cc-number">Credit card number</label>
+                            <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Credit card number is required
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <label for="cc-expiration">Expiration</label>
+                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Expiration date required
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="cc-expiration">CVV</label>
+                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Security code required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-cont-shop" ng-click="home()">
+                    Continue Shopping
+                </button>
+                <button ng-if="emptyCart==false" type="button" class="btn btn-checkout" ng-click="checkout()">
+                    Checkout
+                </button>
+            </div>
+        </div>
+</body>

@@ -1,0 +1,208 @@
+﻿
+
+
+<body>
+    <header>
+        <a href="/#/"><img class="img-left" src="images/logo.png" /></a>
+    </header>
+    <nav class="navbar navbar-expand-sm navbar-light">
+
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsingNavbar4"><span class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse collapse" id="collapsingNavbar4">
+            <ul class="navbar-nav ml-auto">
+                <li ng-if="validUser==true" class="user-info">Welcome, {{currentUser}} |</li>
+                <li class="nav-item"><a class="nav-link" href="/#/">Home</a></li>
+                <li ng-if="validUser==false" class="nav-item"><a class="nav-link" href="/#/signUp">Sign Up</a></li>
+                <li ng-if="validUser==false" class="nav-item"><a class="nav-link" href="/#/signIn">Sign In</a></li>
+                <li ng-if="validUser==true&&admin==false" class="nav-item"><a class="nav-link" href="/#/Cart">My Cart</a></li>
+                <li ng-if="validUser==true&&admin==false" class="nav-item"><a class="nav-link" href="/#/Orders">My Orders</a></li>
+                <li ng-if="validUser==true" class="nav-item"><a class="nav-link" href="" ng-click="logout()">Signout</a></li>
+                <li class="nav-item"><a class="nav-link" href="/#/about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <h1 class="my-4">Autoparts</h1>
+                <p>Your one-stop shop</p>
+                <hr />
+                <div class="search">
+                    <input type="text" class="searchTerm" placeholder="What are you looking for?" ng-model="search_criteria">
+                    <button type="submit" class="searchButton" ng-click="searchFilter(search_criteria)">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+                <hr />
+                <div class="list-group">
+                    <ul>
+
+                        <li ng-repeat="item in items | orderBy:'main_category' as sortedItems1"
+                            data-ng-if="sortedItems1[$index-1].main_category.trim() != item.main_category.trim()"
+                            ng-model="item.main_category">
+                            <button class="btn-arrow arrow" ng-click="sub1$index = sub1$index?false:true">
+                                <div ng-class="sub1$index?'arrow-up':'arrow-down'"></div>
+                            </button>
+                            <button class="btn-nav-label" ng-click="hrefLink(item.main_category,'','')">
+                                <div>{{ item.main_category.trim()}}</div>
+                            </button>
+                            <div class="check-box">
+                                <label class="custom-control custom-checkbox">
+                                    <input id="mc-check-box" type="checkbox" class="custom-control-input"
+                                           value="{{ item.main_category.trim() }}"
+                                           ng-true-value="'{{ item.main_category.trim() }}-Y'"
+                                           ng-false-value="'{{ item.main_category.trim() }}-N'"
+                                           ng-model=mainCheck
+                                           data-ng-click="filterMainCategory(mainCheck)" />
+                                    <span class="custom-control-indicator"></span>
+                                </label>
+                            </div>
+                            <div ng-if="sub1$index">
+                                <ul>
+                                    <li ng-repeat="item in items | filter : item.main_category | orderBy:'sub_category_1' as sortedItems2"
+                                        data-ng-if="sortedItems2[$index-1].sub_category_1.trim() != item.sub_category_1.trim()"
+                                        ng-model="item.sub_category_1">
+
+                                        <button class="btn-arrow-sub1 arrow" ng-click="sub2$index = sub2$index?false:true">
+                                            <div ng-class="sub2$index?'arrow-up':'arrow-down'"></div>
+                                        </button>
+                                        <button class="btn-nav-label-sub1" ng-click="hrefLink(item.main_category, item.sub_category_1, '')">
+                                            <div> {{ item.sub_category_1.trim()}}</div>
+                                        </button>
+                                        <div class="check-box">
+                                            <label class="custom-control custom-checkbox">
+                                                <input id="sub1-check-box" type="checkbox" class="custom-control-input"
+                                                       value="{{ item.sub_category_1.trim()}}"
+                                                       ng-true-value="'{{ item.sub_category_1.trim() }}-Y'"
+                                                       ng-false-value="'{{ item.sub_category_1.trim() }}-N'"
+                                                       ng-model=sub1Check
+                                                       data-ng-click="filterSubCategory1(sub1Check)" />
+                                                <span class="custom-control-indicator"></span>
+                                            </label>
+                                        </div>
+                                        <div class="sub2-nav-link" ng-if="sub2$index">
+                                            <ul>
+                                                <li ng-repeat="item in items | filter : item.sub_category_1 | orderBy:'sub_category_2' as sortedItems3"
+                                                    data-ng-if="sortedItems3[$index-1].sub_category_2.trim() != item.sub_category_2.trim()">
+                                                    <button class="btn-nav-label-sub2" ng-click="hrefLink(item.main_category, item.sub_category_1, item.sub_category_2)">
+                                                        {{ item.sub_category_2.trim()}}
+                                                    </button>
+                                                    <div class="check-box">
+                                                        <label class="custom-control custom-checkbox">
+                                                            <input id="sub2-check-box" type="checkbox" class="custom-control-input"
+                                                                   value="{{ item.sub_category_2.trim()}}"
+                                                                   ng-true-value="'{{ item.sub_category_2.trim() }}-Y'"
+                                                                   ng-false-value="'{{ item.sub_category_2.trim() }}-N'"
+                                                                   ng-model=sub2Check
+                                                                   data-ng-click="filterSubCategory2(sub2Check)" />
+
+                                                            <span class="custom-control-indicator"></span>
+                                                        </label>
+
+                                                    </div>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <hr />
+                    </ul>
+                </div>
+                <label for="price-range">Maximum price - ${{selected_price}}</label>
+                <input type="range" class="custom-range" min="0" max="2000" step="0.5" id="price-range" value="2000" ng-model="selected_price" ng-false-value="2000">
+                <input type="checkbox" class="custom-control-input" id="in-stock-only" value="true" ng-model="available_items">
+                <label class="custom-control-label" for="in-stock-only">In-stock only</label>
+            </div>
+            <!-- /.col-lg-3 -->
+            <div class="col-lg-9">
+
+                <ul class="breadcrumb-list">
+
+                    <li>
+                        <button class="btn breadcrumb-btn" ng-click="goHome()"><i class="glyphicon glyphicon-home"></i> Home</button>
+                    </li>
+                    <li>
+                        <button ng-if="ref_mc" class="btn breadcrumb-btn" ng-click="hrefLink(ref_mc,'','')">
+                            {{ref_mc}}
+                        </button>
+                    </li>
+                    <li>
+                        <button ng-if="ref_sub1" class="btn breadcrumb-btn" ng-click="hrefLink(ref_mc, ref_sub1, '')">
+                            {{ref_sub1}}
+                        </button>
+                    </li>
+                    <li>
+                        <button ng-if="ref_sub2" class="btn breadcrumb-btn" ng-href="hrefLink(ref_mc, ref_sub1, ref_sub2)">
+                            {{ref_sub2}}
+                        </button>
+
+                    </li>
+                </ul>
+                <hr />
+
+                <ul class="item-list">
+                    <li class="item-list"  dir-paginate="item in items | filterProductsPrice:this |filterAvailable:this | filterProducts:this | filter:{flag:1} | itemsPerPage: itemsPerPage"  pagination-id="products">
+                          
+                        <div class="col-sm-4">
+                            <div class="card h-100">
+
+                                <a ng-if="admin" href="/#/item/{{item._id}}">
+                                    <img class="edit-img" src="../images/edit-1.png">
+                                </a>
+                                <a ng-if="admin" href="/#/item/bin/{{item._id}}">
+                                    <img class="delete-img" src="../images/delete-1.png">
+                                </a>
+
+                                <img class="card-img-top prod-img" src="../images/prod-images/{{item.part_no}}.JPG"
+                                     alt="Image of product from {{ item.sub_category_2 }} category">
+                                <div ng-if="item.quantity > 0">
+                                    <img class="stock-img" src="../images/available.png"
+                                         alt="Image of availabilty - in stock">
+                                </div>
+                                <div ng-if="item.quantity <= 0">
+                                    <img class="stock-img" src="../images/out-of-stock.png"
+                                         alt="Image of availabilty - out of stock">
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        {{ item.name }}
+                                    </h4>
+                                    <h5 class="card-price">Price: ${{ item.price }}</h5>
+
+                                </div>
+                                <div class="card-footer">
+                                    <button ng-if="validUser==true&&item.quantity>0&&admin==false" type="button" class="btn btn-success" ng-click="addItemToCart(item)">Add to cart</button>
+                                    <button ng-if="validUser==false&&item.quantity>0" type="button" class="btn btn-success" ng-click="redirectToLogin()">Add to cart</button>
+                                    <button ng-if="item.quantity<=0||admin==true" type="button" class="btn btn-success" ng-click="addItemToCart(item)" disabled>Add to cart</button>
+                                    <a href="/#/item/view/{{item._id}}">
+                                        <img class="info-img" src="../images/info.png"
+                                             alt="Image of information icon">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+
+                <dir-pagination-controls pagination-id="products" class="pagination-links"></dir-pagination-controls>
+                <!-- /.row -->
+            </div>
+            <!-- /.col-lg-9 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+    <div ng-if="admin" id="admin-content">
+        <h5>Admin Content</h5>
+        <hr />
+        <a class="admin-nav" href="/#/add-prod">Add product</a>
+        <a class="admin-nav" href="/#/bin">View Bin</a>
+    </div>
+
+
+</body>

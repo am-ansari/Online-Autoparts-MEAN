@@ -1,0 +1,171 @@
+<header>
+    <a href="/#/"><img class="img-left" src="images/logo.png" /></a>
+</header>
+<nav class="navbar navbar-expand-sm navbar-light">
+
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsingNavbar4"><span class="navbar-toggler-icon"></span></button>
+    <div class="navbar-collapse collapse" id="collapsingNavbar4">
+        <ul class="navbar-nav ml-auto">
+            <li ng-if="validUser==true" class="user-info">Welcome, {{currentUser}} |</li>
+            <li class="nav-item"><a class="nav-link" href="/#/">Home</a></li>
+            <li ng-if="validUser==false" class="nav-item"><a class="nav-link" href="/#/signUp">Sign Up</a></li>
+            <li ng-if="validUser==false" class="nav-item"><a class="nav-link" href="/#/signIn">Sign In</a></li>
+            <li ng-if="validUser==true&&admin==false" class="nav-item"><a class="nav-link" href="/#/Cart">My Cart</a></li>
+            <li ng-if="validUser==true&&admin==false" class="nav-item"><a class="nav-link" href="/#/Orders">My Orders</a></li>
+            <li ng-if="validUser==true" class="nav-item"><a class="nav-link" href="" ng-click="logout()">Signout</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="container">
+        <article class="card-body mx-auto">
+
+            <h2 id="header-title" class="card-title text-center">Add Item</h2>
+
+            <form>
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> Main Category </span>
+                    </div>
+                    <input id="main-catg-inp" class="form-control inp-field" ng-model="item.main_category" />
+
+                    <select id="main-catg-dd" class="form-control"
+                            ng-model="item.main_category">
+                        <option value="">Please select main category or change option on the right for a new entry</option>
+                        <option ng-repeat="item in items1 | orderBy:'main_category' as sortedItems"
+                                data-ng-if="sortedItems[$index-1].main_category != item.main_category" value="{{ item.main_category.trim() }}">
+                            {{ item.main_category }}
+                        </option>
+                    </select>
+
+                    <div>
+                        <select id="main-catg-opt" class="form-control drop-down" onchange="setField1()">
+                            <option value="Existing">Existing</option>
+                            <option value="New">New</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> Sub-Category 1 </span>
+                    </div>
+                    <input id="sub-catg1-inp" class="form-control inp-field" ng-model="item.sub_category_1" />
+
+                    <select id="sub-catg1-dd" class="form-control"
+                            ng-model="item.sub_category_1">
+                        <option value="">Please select sub category 1 or change option on the right for a new entry</option>
+                        <option ng-repeat="item in items1 | filter : item.main_category | orderBy:'sub_category_1' as sortedItems2"
+                                data-ng-if="sortedItems2[$index-1].sub_category_1 != item.sub_category_1" value="{{ item.sub_category_1.trim() }}">
+                            {{ item.sub_category_1 }}
+                        </option>
+                    </select>
+
+                    <div>
+                        <select id="sub-catg1-opt" class="form-control drop-down" onchange="setField2()">
+                            <option>Existing</option>
+                            <option>New</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> Sub-Category 2 </span>
+                    </div>
+                    <input id="sub-catg2-inp" class="form-control inp-field" ng-model="item.sub_category_2" />
+
+                    <select id="sub-catg2-dd" class="form-control"
+                            ng-model="item.sub_category_2">
+                        <option value="">Please select sub category 2 or change option on the right for a new entry</option>
+                        <option ng-repeat="item in items1 | filter : item.sub_category_1 | orderBy:'sub_category_2' as sortedItems3"
+                                data-ng-if="sortedItems3[$index-1].sub_category_2 != item.sub_category_2" value="{{ item.sub_category_2 }}">
+                            {{ item.sub_category_2 }}
+                        </option>
+                    </select>
+
+                    <div>
+                        <select id="sub-catg2-opt" class="form-control drop-down" onchange="setField3()">
+                            <option>Existing</option>
+                            <option>New</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> Name </span>
+                    </div>
+                    <input class="form-control inp-field" ng-model="item.name">
+                </div>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> Part number </span>
+                    </div>
+                    <input class="form-control inp-field" ng-model="item.part_no">
+                </div>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> Price </span>
+                    </div>
+                    <input class="form-control inp-field" ng-model="item.price">
+                </div>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> Weight </span>
+                    </div>
+                    <input class="form-control inp-field" ng-model="item.weight">
+                </div>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> Shape </span>
+                    </div>
+                    <input class="form-control inp-field" ng-model="item.shape">
+                </div>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> Quantity </span>
+                    </div>
+                    <input class="form-control inp-field" ng-model="item.quantity">
+                </div>
+                <!--
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> Image name </span>
+                    </div>
+                    <input class="form-control inp-field" ng-model="item.url">
+                </div>
+                   -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> Features </span>
+                    </div>
+                    <textarea class="form-control inp-field" ng-model="item.features"></textarea>
+                </div>
+
+                <input type="button" class="btn btn-primary" value="Save" ng-click="save()">
+
+                <input ng-controller="AddProductCtrl" type="button" class="btn btn-primary" value="Go back" ng-click="goHome()">
+                <input ng-controller="AddProductCtrl" type="button" class="btn btn-primary" value="Add new item" ng-click="refresh()">
+
+
+            </form>
+            <form ng-if="item.part_no" method="post" action="/uploadfile" enctype="multipart/form-data">
+                <div class="form-group input-group upload-div">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> Add image </span>
+                    </div>
+                    <input class="upload-text" type="text" name="part_no" value={{item.part_no}} />
+                    <input class="btn btn-choose" type="file" name="myFile" />
+                    <input class="btn btn-upload" type="submit" value="Upload" id="upload-btn" />
+                </div>
+            </form>
+            <div class="form-group input-group">
+                <img class="item-img" src="../images/prod-images/{{item.part_no}}.jpg"
+                     alt="Image of product from {{ item.sub_category_2 }} category">
+            </div>
+        </article>
+    </div>
+</div>
+

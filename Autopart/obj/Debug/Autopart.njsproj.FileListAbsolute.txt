@@ -1,0 +1,3 @@
+C:\Users\Abdullah\OneDrive - The University of Texas at Dallas\Sem 2\CS 6314 WPL\Final Project\Autopart\Autopart\Autopart\obj\Debug\Autopart.njsproj.CoreCompileInputs.cache
+C:\Users\Abdullah\OneDrive - The University of Texas at Dallas\Sem 2\CS 6314 WPL\Final Project\Autopart\Autopart\Autopart\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\Abdullah\OneDrive - The University of Texas at Dallas\Sem 2\CS 6314 WPL\Final Project\Autopart\Autopart\Autopart\obj\Debug\Autopart.njsprojAssemblyReference.cache

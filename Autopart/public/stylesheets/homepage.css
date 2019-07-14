@@ -1,0 +1,10 @@
+﻿#logintitle{
+    background-color:aquamarine;
+    align-content:center;
+}
+
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
