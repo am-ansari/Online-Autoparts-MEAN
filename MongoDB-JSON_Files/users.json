@@ -1,0 +1,47 @@
+/* 1 */
+{
+    "_id" : ObjectId("5cbc1c50de4e1c59d482f196"),
+    "username" : "abdansari",
+    "fullname" : "Abdullah Ansari",
+    "email" : "abd.xyz@gmail.com",
+    "phone" : "9998887771",
+    "address" : "Dallas",
+    "password" : "de0809a3d39f05d5c29b08655cf5de4bd3a85d4c8136754d4d8c708c230031ca2ea55d3e230072fec0e35201ad68b110c3ca90f501fd07e580c594d0895198f6",
+    "salt" : "3a494c143942bada"
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("5cbc202fd3bba06f949d01c9"),
+    "username" : "admin",
+    "fullname" : "Admin",
+    "email" : "admin@admin.com",
+    "phone" : "9998887771",
+    "address" : "Dallas",
+    "password" : "2faba75fa83a1ff5ac1923140cad13ef2c0623fcdcd0c82c45a61b800b5c2cd94a7a3500afadb02b44b98b912acee18ef7474e187e9aa135c8a13cdea55916da",
+    "salt" : "316d910144c05286"
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("5cc3b95f548a8c4dbcb6a49a"),
+    "username" : "user1",
+    "fullname" : "User1",
+    "email" : "user1@gmail.com",
+    "phone" : "999888771",
+    "address" : "Dallas",
+    "password" : "b0301c414c8d91a0214528f0637c9c203ca5d27e2b2a603ed2f91223580dcb1e532457088b64d75f989b995e9a7c09eefe900d73ffc40b0d939186452c1d1947",
+    "salt" : "860d19af30f2b5aa"
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("5cc7a51640f7af73e46b3a45"),
+    "username" : "deb",
+    "fullname" : "Debparna Das",
+    "email" : "debparna@tamu.edu",
+    "phone" : "979739741",
+    "address" : "401 Anderson St.",
+    "password" : "68aa169e2d3ab556c6a8292cbf138a79bcfc51caefc4d131b7d6cf2baf2c9a3dbbe0dfa5a8edeb1fe7ca5b79c46181c05c016cab29318e3c222c8c9d0447cfb8",
+    "salt" : "4e81eb1ceede5285"
+}
