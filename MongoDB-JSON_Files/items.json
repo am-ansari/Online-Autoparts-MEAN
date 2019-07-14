@@ -1,0 +1,472 @@
+/* 1 */
+{
+    "_id" : ObjectId("5cb2ee8ce30168bf94c43312"),
+    "main_category" : "Ignition, Tune Up And Routine Maintenance",
+    "sub_category_1" : "Air, Breather, Cabin filters",
+    "sub_category_2" : "Air Filter",
+    "name" : "STP Air Filter",
+    "part_no" : "SA10957",
+    "price" : "21.99",
+    "weight" : "0.87lbs",
+    "shape" : "Rectangular Air Filter",
+    "quantity" : 9,
+    "features" : "N/A",
+    "flag" : "0"
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("5cb2ef53e30168bf94c43314"),
+    "main_category" : "Ignition, Tune Up And Routine Maintenance",
+    "sub_category_1" : "Battery",
+    "sub_category_2" : "Battery Cable",
+    "name" : "Duralast Battery Cable",
+    "part_no" : "DS425B",
+    "price" : "7.99",
+    "weight" : "0.59lbs",
+    "shape" : "NA",
+    "quantity" : 11,
+    "features" : null,
+    "flag" : "1"
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("5cb2f4eab2d372e56c7a2650"),
+    "main_category" : "Brakes And Traction Control",
+    "sub_category_1" : "ABS System",
+    "sub_category_2" : "ABS Cable Bracket",
+    "name" : "Duralast ABS Cable Bracket",
+    "part_no" : "SU8762",
+    "price" : "9.99",
+    "weight" : "0.05lbs",
+    "shape" : "Mounting Clips Only",
+    "quantity" : "10",
+    "features" : "N/A",
+    "flag" : "1"
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("5cb30dea2a3554d2943fc418"),
+    "main_category" : "Ignition, Tune Up And Routine Maintenance",
+    "sub_category_1" : "Air, Breather, Cabin filters",
+    "sub_category_2" : "Air Filter Box",
+    "name" : "Dorman Air Filter Box",
+    "part_no" : "258-514",
+    "price" : "99.99",
+    "weight" : "5.00lbs",
+    "shape" : "Plastic",
+    "quantity" : 23,
+    "url" : "258-514.jpg",
+    "features" : null,
+    "flag" : "1"
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("5cb35e6896e06f7b7c6ee10d"),
+    "main_category" : "Brakes And Traction Control",
+    "sub_category_1" : "ABS System",
+    "sub_category_2" : "ABS Deceleration Sensor",
+    "name" : "Duralast ABS Deceleration Sensor",
+    "part_no" : "SU14914",
+    "price" : "545.99",
+    "weight" : "0.12lbs",
+    "shape" : "Black / Plastic",
+    "quantity" : "0",
+    "url" : "SU14914.jpg",
+    "features" : null,
+    "flag" : "1"
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("5cb35ee996e06f7b7c6ee10e"),
+    "main_category" : "Brakes And Traction Control",
+    "sub_category_1" : "ABS System",
+    "sub_category_2" : "ABS Deceleration Sensor",
+    "name" : "Duralast ABS Deceleration Sensor",
+    "part_no" : "SU15030",
+    "price" : "391.99",
+    "weight" : "0.87lbs",
+    "shape" : "Black, Silver / Plastic, Metal",
+    "quantity" : 3,
+    "url" : "SU15030.jpg",
+    "features" : null,
+    "flag" : "1"
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("5cb360f996e06f7b7c6ee110"),
+    "main_category" : "External Engine",
+    "sub_category_1" : "Ignition",
+    "sub_category_2" : "Distributor",
+    "name" : "Duralast Gold New Distributor",
+    "part_no" : "BDLG-GM04",
+    "price" : "129.99",
+    "weight" : "3.45lbs",
+    "shape" : "Standard Replacement",
+    "quantity" : 42,
+    "url" : "BDLG-GM04.jpg",
+    "features" : null,
+    "flag" : "1"
+}
+
+/* 8 */
+{
+    "_id" : ObjectId("5cb3615196e06f7b7c6ee111"),
+    "main_category" : "External Engine",
+    "sub_category_1" : "Ignition",
+    "sub_category_2" : "Distributor",
+    "name" : "Duralast Gold New Distributor",
+    "part_no" : "ADLG-TD80",
+    "price" : "241.99",
+    "weight" : "4.40lbs",
+    "shape" : "Standard Replacement",
+    "quantity" : "34",
+    "url" : "ADLG-TD80.jpg",
+    "features" : "Unit is designed to OE fit, form and function requirements accomplished by leveraging our OE engine management systems design expertise\nOE design cap and replacement rotor included for fast installation\nAll units new, no rebuilds or core charges\nAll unit components are computer tested to ensure full functionality\nEach new distributor is road tested to ensure real world performance and to verify that each design meets our high standards for quality\nEngineered to stringent tolerances based on our Canadian engineers’ in-depth knowledge of the OE part it’s designed to replace",
+    "flag" : "1"
+}
+
+/* 9 */
+{
+    "_id" : ObjectId("5cb64153c19c7ff658374fea"),
+    "main_category" : "Electrical And Lighting",
+    "sub_category_1" : "Anti-Theft, Locks And Keyless Entry",
+    "sub_category_2" : "Anti-Theft Module",
+    "name" : "Painless Wiring Anti-Theft Module",
+    "part_no" : "64024",
+    "price" : "23.99",
+    "weight" : "0.12lbs",
+    "shape" : "N/A",
+    "quantity" : 7,
+    "url" : "64024.jpg",
+    "features" : "Vats module.",
+    "flag" : "1"
+}
+
+/* 10 */
+{
+    "_id" : ObjectId("5cb65e50f4b034fd0c66bcb1"),
+    "main_category" : "Electrical And Lighting",
+    "sub_category_1" : "Anti-Theft, Locks And Keyless Entry",
+    "sub_category_2" : "Door Lock Actuator",
+    "name" : "Duralast Door Lock Actuator",
+    "part_no" : "DLA136",
+    "price" : "37.99",
+    "weight" : "0.45lbs",
+    "shape" : "Plastic",
+    "quantity" : "10",
+    "url" : "DLA136.jpg",
+    "features" : "The door lock actuator locks and releases electric door locks\nWhen not replaced, door locks will not activate potentially causing safety issues\nDesigned to meet or exceed OE specifications in form, fit and function\nGlobal coverage for import and domestic applications",
+    "flag" : "1"
+}
+
+/* 11 */
+{
+    "_id" : ObjectId("5cbaaec3fb12a8e698aae11a"),
+    "main_category" : "Electrical And Lighting",
+    "sub_category_1" : "Anti-Theft, Locks And Keyless Entry",
+    "sub_category_2" : "Door Lock Actuator",
+    "name" : "Duralast Door Lock Actuator",
+    "part_no" : "DLA135",
+    "price" : "36.99",
+    "weight" : "0.30lbs",
+    "shape" : "Plastic",
+    "quantity" : "13",
+    "url" : "DLA135.jpg",
+    "features" : "The door lock actuator locks and releases electric door locks\nWhen not replaced, door locks will not activate potentially causing safety issues\nDesigned to meet or exceed OE specifications in form, fit and function\nGlobal coverage for import and domestic applications",
+    "flag" : "1"
+}
+
+/* 12 */
+{
+    "_id" : ObjectId("5cbab14bfb12a8e698aae11b"),
+    "main_category" : "Electrical And Lighting",
+    "sub_category_1" : "Anti-Theft, Locks And Keyless Entry",
+    "sub_category_2" : "Ignition Lock Cylinder",
+    "name" : "Locksmart Ignition Lock Cylinder",
+    "part_no" : "LC14060",
+    "price" : "12.99",
+    "weight" : "0.80lbs",
+    "shape" : "Chrome",
+    "quantity" : "11",
+    "url" : "LC14060.jpg",
+    "features" : "All ignition locks are perfectly matched to the original for precision installation\nProfessional quality construction using solid brass tumblers, chrome plated brass keys, die-cast zinc lock cores and multiple, randomly assigned key codes ensures superior operation\nDecades of industry leading research and development focused on meeting the technicians needs\nWith industry leading expertise, when original equipment fails our products are designed to fix the inherent failure issues",
+    "flag" : "1"
+}
+
+/* 13 */
+{
+    "_id" : ObjectId("5cc268e3903597a60c074d9f"),
+    "main_category" : "Collision, Body Parts And Hardware",
+    "sub_category_1" : "Bumper And Bumper Accessories",
+    "sub_category_2" : "Air Bag Impact Sensor",
+    "name" : "Duralast Air Bag Impact Sensor",
+    "part_no" : "SU15918",
+    "price" : "273.99",
+    "weight" : "0.09lbs",
+    "shape" : "1 Female Connector / 2 Male Blade",
+    "quantity" : "10",
+    "features" : "Duralast products are engineered and manufactured by Wells Vehicle Electronics, a leading global supplier of advanced vehicle electronics solutions for original equipment and replacement applications. Every component either matches or improves on the OE design to ensure fast, easy installation, superior performance and reliability. Wells offers extensive application information and technical support via its Tech Line at 1-800-558-9770.\n\nTop performance for long service life\nMaximum reliability\nDesigned to meet or exceed OE specifications in form, fit and function\nGlobal coverage for import and/or domestic applications",
+    "flag" : "1"
+}
+
+/* 14 */
+{
+    "_id" : ObjectId("5cc275ffbdd26e9a0cbd3619"),
+    "main_category" : "Collision, Body Parts And Hardware",
+    "sub_category_1" : "Bumper And Bumper Accessories",
+    "sub_category_2" : "Air Bag Impact Sensor",
+    "name" : "Duralast Air Bag Impact Sensor",
+    "part_no" : "SU15080",
+    "price" : "324.99",
+    "weight" : "0.12lbs",
+    "shape" : "1 Female Connector / 2 Male Blade",
+    "quantity" : "10",
+    "features" : "Duralast products are engineered and manufactured by Wells Vehicle Electronics, a leading global supplier of advanced vehicle electronics solutions for original equipment and replacement applications. Every component either matches or improves on the OE design to ensure fast, easy installation, superior performance and reliability. Wells offers extensive application information and technical support via its Tech Line at 1-800-558-9770.\n\nTop performance for long service life\nMaximum reliability\nDesigned to meet or exceed OE specifications in form, fit and function\nGlobal coverage for import and domestic applications",
+    "flag" : "1"
+}
+
+/* 15 */
+{
+    "_id" : ObjectId("5cc276bfbdd26e9a0cbd361a"),
+    "main_category" : "Collision, Body Parts And Hardware",
+    "sub_category_1" : "Bumper And Bumper Accessories",
+    "sub_category_2" : "Air Bag Impact Sensor",
+    "name" : "Duralast Air Bag Impact Sensor",
+    "part_no" : "SU15865",
+    "price" : "274.99",
+    "weight" : "0.11lbs",
+    "shape" : "1 Female Connector / 2 Male Blade",
+    "quantity" : "15",
+    "features" : "Duralast products are engineered and manufactured by Wells Vehicle Electronics, a leading global supplier of advanced vehicle electronics solutions for original equipment and replacement applications. Every component either matches or improves on the OE design to ensure fast, easy installation, superior performance and reliability. Wells offers extensive application information and technical support via its Tech Line at 1-800-558-9770.\n\nTop performance for long service life\nMaximum reliability\nDesigned to meet or exceed OE specifications in form, fit and function\nGlobal coverage for import and/or domestic applications",
+    "flag" : "1"
+}
+
+/* 16 */
+{
+    "_id" : ObjectId("5cc2a82a966912b3e4038eb2"),
+    "main_category" : "Collision, Body Parts And Hardware",
+    "sub_category_1" : "Bumper And Bumper Accessories",
+    "sub_category_2" : "Air Bag Impact Sensor",
+    "name" : "Duralast Air Bag Impact Sensor",
+    "part_no" : "SU15064",
+    "price" : "309.99",
+    "weight" : "0.10lbs",
+    "shape" : "1 Female Connector / 2 Male Blade",
+    "quantity" : "20",
+    "features" : "Top performance for long service life\nMaximum reliability\nDesigned to meet or exceed OE specifications in form, fit and function\nGlobal coverage for import and domestic applications",
+    "flag" : "1"
+}
+
+/* 17 */
+{
+    "_id" : ObjectId("5cc2a931ddcfcd39dcb35bde"),
+    "main_category" : "Collision, Body Parts And Hardware",
+    "sub_category_1" : "Bumper And Bumper Accessories",
+    "sub_category_2" : "Bumper",
+    "name" : "Westin Bumper- Rear",
+    "part_no" : "20105",
+    "price" : "207.99",
+    "weight" : "80.00lbs",
+    "shape" : "Cold Rolled Steel",
+    "quantity" : "5",
+    "features" : "Provides secure step area\nRated at 3,500 lbs trailer, 350 lbs tongue\nEasy bolt on\nVehicle specific fitment",
+    "flag" : "1"
+}
+
+/* 18 */
+{
+    "_id" : ObjectId("5cc2ac43ddcfcd39dcb35bdf"),
+    "main_category" : "Collision, Body Parts And Hardware",
+    "sub_category_1" : "Bumper And Bumper Accessories",
+    "sub_category_2" : "Bumper",
+    "name" : "Rampage Bumper- Front",
+    "part_no" : "8449",
+    "price" : "289.99",
+    "weight" : "100.00lbs",
+    "shape" : "N/A",
+    "quantity" : "3",
+    "features" : "Robotically Welded To Exacting Specifications; Welded One Piece Design for Extreme Durability; Polished 304 grade Stainless Steel; Attractive Dual Bar Design without Stinger Hoop; Attaches to Factory Frame Mount;",
+    "flag" : "1"
+}
+
+/* 19 */
+{
+    "_id" : ObjectId("5cc2acc3ddcfcd39dcb35be0"),
+    "main_category" : "Collision, Body Parts And Hardware",
+    "sub_category_1" : "Bumper And Bumper Accessories",
+    "sub_category_2" : "Bumper",
+    "name" : "Westin Bumper- Rear",
+    "part_no" : "58-250705",
+    "price" : "1399.99",
+    "weight" : "85.00lbs",
+    "shape" : "7 Gauge steel",
+    "quantity" : "4",
+    "features" : "7 gauge steel\n1-piece fully welded construction\n1 In. thick HD shackle mounts\nLaser-cut HDX logo on ends",
+    "flag" : "1"
+}
+
+/* 20 */
+{
+    "_id" : ObjectId("5cc3b2d7548a8c4dbcb6a491"),
+    "main_category" : "Drivetrain",
+    "sub_category_1" : "Axle",
+    "sub_category_2" : "Axle Bolt",
+    "name" : "Dorman Axle Bolt",
+    "part_no" : "615-006",
+    "price" : "17.99",
+    "weight" : "0.90lbs",
+    "shape" : "0.90lbs",
+    "quantity" : "120",
+    "features" : "Direct replacement for a proper fit every time\nHigh quality steel construction\nConveniently available in many styles and in packs of different quantities\nDorman’s spindle nuts are constructed to strict engineering quality standards",
+    "flag" : "1"
+}
+
+/* 21 */
+{
+    "_id" : ObjectId("5cc3b330548a8c4dbcb6a492"),
+    "main_category" : "Drivetrain",
+    "sub_category_1" : "Axle",
+    "sub_category_2" : "Axle Bolt",
+    "name" : "Dorman Axle Bolt",
+    "part_no" : "615-007",
+    "price" : "35.99",
+    "weight" : "0.96lbs",
+    "shape" : "2 Spindle Nuts",
+    "quantity" : 199,
+    "features" : "Direct replacement for a proper fit every time\nHigh quality steel construction\nConveniently available in many styles and in packs of different quantities\nDorman’s spindle nuts are constructed to strict engineering quality standards",
+    "flag" : "1"
+}
+
+/* 22 */
+{
+    "_id" : ObjectId("5cc3b382548a8c4dbcb6a493"),
+    "main_category" : "Drivetrain",
+    "sub_category_1" : "Axle",
+    "sub_category_2" : "Axle Bumper",
+    "name" : "Dorman Axle Bumper",
+    "part_no" : "31068",
+    "price" : "42.99",
+    "weight" : "0.49lbs",
+    "shape" : "Polyurethane",
+    "quantity" : "11",
+    "features" : "Crack-resistant design for long-lasting use\nStands up to everyday wear and tear\nDirect replacement for a proper fit every time\nEasy to install",
+    "flag" : "1"
+}
+
+/* 23 */
+{
+    "_id" : ObjectId("5cc3b3f8548a8c4dbcb6a494"),
+    "main_category" : "Drivetrain",
+    "sub_category_1" : "Axle",
+    "sub_category_2" : "Axle Hub O-Ring",
+    "name" : "Dorman Axle Hub O-Ring",
+    "part_no" : "81060",
+    "price" : "11.99",
+    "weight" : "0.10lbs",
+    "shape" : "1 Retaining Clip, 2 O-Rings",
+    "quantity" : "111",
+    "features" : "Comes with one retaining ring and two o-rings: one for testing and one for final installation\nDirect replacement for a proper fit\nOil-resistant\nEasy to install",
+    "flag" : "1"
+}
+
+/* 24 */
+{
+    "_id" : ObjectId("5cc3b451548a8c4dbcb6a495"),
+    "main_category" : "Drivetrain",
+    "sub_category_1" : "Axle",
+    "sub_category_2" : "Axle Shaft",
+    "name" : "Dorman Axle Shaft",
+    "part_no" : "630-323",
+    "price" : "224.99",
+    "weight" : "23.00lbs",
+    "shape" : "Steel rod",
+    "quantity" : "20",
+    "features" : "Comes with the axle bearing, oil seal, wheel studs, and wheel nuts\nDirect replacement for a proper fit every time\nDurable steel construction for long-lasting performance\nQuality control measures, including on-the-vehicle testing, ensure that this part conforms to product standards",
+    "flag" : "1"
+}
+
+/* 25 */
+{
+    "_id" : ObjectId("5cc3b4a0548a8c4dbcb6a496"),
+    "main_category" : "Drivetrain",
+    "sub_category_1" : "Axle",
+    "sub_category_2" : "Axle Shaft",
+    "name" : "Dorman Axle Shaft",
+    "part_no" : "630-427",
+    "price" : "354.99",
+    "weight" : "11.40lbs",
+    "shape" : "Inner Axle, Outer Axle, U-Joint",
+    "quantity" : "10",
+    "features" : "Comes with the axle bearing, oil seal, wheel studs, and wheel nuts\nDirect replacement for a proper fit every time\nDurable steel construction for long-lasting performance\nQuality control measures, including on-the-vehicle testing, ensure that this part conforms to product standards",
+    "flag" : "1"
+}
+
+/* 26 */
+{
+    "_id" : ObjectId("5cc3b546548a8c4dbcb6a497"),
+    "main_category" : "Drivetrain",
+    "sub_category_1" : "Bearing, Seal And Wheel",
+    "sub_category_2" : "Locking Hub (4 Wheel Drive)",
+    "name" : "Mile Marker Locking Hub (4 Wheel Drive)",
+    "part_no" : "470",
+    "price" : "119.99",
+    "weight" : "6.10lbs",
+    "shape" : "Manual Hub",
+    "quantity" : "11",
+    "features" : "Appearance chrome\n27 spline\nServiceable hub\n5 bolt",
+    "flag" : "1"
+}
+
+/* 27 */
+{
+    "_id" : ObjectId("5cc3b61f548a8c4dbcb6a498"),
+    "main_category" : "Drivetrain",
+    "sub_category_1" : "Bearing, Seal And Wheel",
+    "sub_category_2" : "Locking Hub (4 Wheel Drive)",
+    "name" : "Mile Marker Locking Hub (4 Wheel Drive)",
+    "part_no" : "104",
+    "price" : "138.99",
+    "weight" : "3.85lbs",
+    "shape" : "Manuel Hub",
+    "quantity" : "111",
+    "features" : "Stainless steel\n19 spline\nServiceable hub\nInternal mount",
+    "flag" : "1"
+}
+
+/* 28 */
+{
+    "_id" : ObjectId("5cc3b78f548a8c4dbcb6a499"),
+    "main_category" : "Drivetrain",
+    "sub_category_1" : "Clutch",
+    "sub_category_2" : "Clutch Adjuster",
+    "name" : "Help Clutch Adjuster",
+    "part_no" : "14554",
+    "price" : "10.99",
+    "weight" : "0.30lbs",
+    "shape" : "Rod, Sleeve, 2 Nuts",
+    "quantity" : "23",
+    "features" : "Includes lock nut (where applicable)\nAll necessary installation hardware included (where applicable)\nDirect replacement for a proper fit every time\nHigh quality steel construction—treated for corrosion resistance",
+    "flag" : "1"
+}
+
+/* 29 */
+{
+    "_id" : ObjectId("5cc9c440d412fcbe74b457d6"),
+    "main_category" : "Brakes And Traction Control",
+    "sub_category_1" : "ABS System",
+    "sub_category_2" : "ABS Cable Bracket",
+    "name" : "ABC",
+    "part_no" : "123",
+    "price" : "110",
+    "weight" : "0.1lbs",
+    "shape" : "NA",
+    "quantity" : "19",
+    "features" : "NA",
+    "flag" : "1"
+}
