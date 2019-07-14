@@ -1,0 +1,377 @@
+/* 1 */
+{
+    "_id" : ObjectId("5cc2811c87f330a4a48b51b5"),
+    "items" : [ 
+        {
+            "name" : "Duralast Battery Cable",
+            "price" : "7.99",
+            "part_no" : "DS425B",
+            "count" : 1
+        }, 
+        {
+            "name" : "Duralast ABS Cable Bracket",
+            "price" : "9.99",
+            "part_no" : "SU8762",
+            "count" : 1
+        }, 
+        {
+            "name" : "STP Air Filter",
+            "price" : "21.99",
+            "part_no" : "SA10957",
+            "count" : 1
+        }
+    ],
+    "subtotal" : 39.97,
+    "estimatedshipping" : 1.9985,
+    "totalPurchase" : 41.9685,
+    "userName" : "abdansari",
+    "orderTime" : "April 25, 2019 10:55 PM"
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("5cc2858d54f898c15833d8fa"),
+    "items" : [ 
+        {
+            "name" : "Duralast Battery Cable",
+            "price" : "7.99",
+            "part_no" : "DS425B",
+            "count" : 1
+        }
+    ],
+    "subtotal" : 7.99,
+    "estimatedshipping" : 0.3995,
+    "totalPurchase" : 8.3895,
+    "userName" : "abdansari",
+    "orderTime" : "April 25, 2019 11:14 PM"
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("5cc2a0a872742ac35c65b015"),
+    "items" : [ 
+        {
+            "name" : "STP Air Filter",
+            "price" : "21.99",
+            "part_no" : "SA10957",
+            "count" : 2
+        }, 
+        {
+            "name" : "Dorman Air Filter Box",
+            "price" : "99.99",
+            "part_no" : "258-514",
+            "count" : 2
+        }
+    ],
+    "subtotal" : 243.96,
+    "estimatedshipping" : 12.198,
+    "totalPurchase" : 256.158,
+    "userName" : "abdansari",
+    "orderTime" : "April 26, 2019 1:09 AM"
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("5cc63ab264d92c69b06001c5"),
+    "items" : [ 
+        {
+            "name" : "Duralast Battery Cable",
+            "price" : "7.99",
+            "part_no" : "DS425B",
+            "count" : 1
+        }
+    ],
+    "subtotal" : 7.99,
+    "estimatedshipping" : 0.3995,
+    "totalPurchase" : 8.3895,
+    "userName" : "abdansari",
+    "orderTime" : "April 28, 2019 6:43 PM"
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("5cc63d227c0c4c13b8de51e3"),
+    "items" : [ 
+        {
+            "name" : "Duralast ABS Cable Bracket",
+            "price" : "9.99",
+            "part_no" : "SU8762",
+            "count" : 1
+        }
+    ],
+    "subtotal" : 9.99,
+    "estimatedshipping" : 0.4995,
+    "totalPurchase" : 10.4895,
+    "userName" : "abdansari",
+    "orderTime" : "April 28, 2019 6:54 PM"
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("5cc6690e06eb9a87fc7b8f5f"),
+    "items" : [ 
+        {
+            "name" : "Duralast ABS Cable Bracket",
+            "price" : "9.99",
+            "part_no" : "SU8762",
+            "count" : 3
+        }, 
+        {
+            "name" : "Duralast Battery Cable",
+            "price" : "7.99",
+            "part_no" : "DS425B",
+            "count" : 3
+        }, 
+        {
+            "name" : "Dorman Air Filter Box",
+            "price" : "99.99",
+            "part_no" : "258-514",
+            "count" : 2
+        }, 
+        {
+            "name" : "STP Air Filter",
+            "price" : "21.99",
+            "part_no" : "SA10957",
+            "count" : 2
+        }, 
+        {
+            "name" : "Painless Wiring Anti-Theft Module",
+            "price" : "23.99",
+            "part_no" : "64024",
+            "count" : 1
+        }
+    ],
+    "subtotal" : 321.89,
+    "estimatedshipping" : 16.0945,
+    "totalPurchase" : 337.9845,
+    "userName" : "abdansari",
+    "orderTime" : "April 28, 2019 10:01 PM"
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("5cc66b58b947a187e48069c7"),
+    "items" : [ 
+        {
+            "name" : "Duralast ABS Deceleration Sensor",
+            "price" : "391.99",
+            "part_no" : "SU15030",
+            "count" : 1
+        }
+    ],
+    "subtotal" : 391.99,
+    "estimatedshipping" : 19.5995,
+    "totalPurchase" : 411.5895,
+    "userName" : "abdansari",
+    "orderTime" : "April 28, 2019 10:11 PM"
+}
+
+/* 8 */
+{
+    "_id" : ObjectId("5cc66bb7b947a187e48069c8"),
+    "items" : [ 
+        {
+            "name" : "Duralast ABS Cable Bracket",
+            "price" : "9.99",
+            "part_no" : "SU8762",
+            "count" : 1
+        }
+    ],
+    "subtotal" : 9.99,
+    "estimatedshipping" : 0.4995,
+    "totalPurchase" : 10.4895,
+    "userName" : "user1",
+    "orderTime" : "April 28, 2019 10:12 PM"
+}
+
+/* 9 */
+{
+    "_id" : ObjectId("5cc66bcfb947a187e48069c9"),
+    "items" : [ 
+        {
+            "name" : "Duralast Battery Cable",
+            "price" : "7.99",
+            "part_no" : "DS425B",
+            "count" : 1
+        }
+    ],
+    "subtotal" : 7.99,
+    "estimatedshipping" : 0.3995,
+    "totalPurchase" : 8.3895,
+    "userName" : "user1",
+    "orderTime" : "April 28, 2019 10:13 PM"
+}
+
+/* 10 */
+{
+    "_id" : ObjectId("5cc66bf8b947a187e48069ca"),
+    "items" : [ 
+        {
+            "name" : "Painless Wiring Anti-Theft Module",
+            "price" : "23.99",
+            "part_no" : "64024",
+            "count" : 2
+        }, 
+        {
+            "name" : "Duralast Gold New Distributor",
+            "price" : "129.99",
+            "part_no" : "BDLG-GM04",
+            "count" : 1
+        }
+    ],
+    "subtotal" : 177.97,
+    "estimatedshipping" : 8.8985,
+    "totalPurchase" : 186.8685,
+    "userName" : "user1",
+    "orderTime" : "April 28, 2019 10:14 PM"
+}
+
+/* 11 */
+{
+    "_id" : ObjectId("5cc66c0eb947a187e48069cb"),
+    "items" : [ 
+        {
+            "name" : "Duralast ABS Deceleration Sensor",
+            "price" : "391.99",
+            "part_no" : "SU15030",
+            "count" : 1
+        }
+    ],
+    "subtotal" : 391.99,
+    "estimatedshipping" : 19.5995,
+    "totalPurchase" : 411.5895,
+    "userName" : "user1",
+    "orderTime" : "April 28, 2019 10:14 PM"
+}
+
+/* 12 */
+{
+    "_id" : ObjectId("5cc683afe6824c4eb894c72e"),
+    "items" : [ 
+        {
+            "name" : "STP Air Filter",
+            "price" : "21.99",
+            "part_no" : "SA10957",
+            "count" : 1
+        }
+    ],
+    "subtotal" : 21.99,
+    "estimatedshipping" : 1.0995,
+    "totalPurchase" : 23.0895,
+    "userName" : "user1",
+    "orderTime" : "April 28, 2019 11:55 PM"
+}
+
+/* 13 */
+{
+    "_id" : ObjectId("5cc6c04d60be848dacf6e37a"),
+    "items" : [ 
+        {
+            "name" : "Duralast ABS Cable Bracket",
+            "price" : "9.99",
+            "part_no" : "SU8762",
+            "count" : 1
+        }, 
+        {
+            "name" : "STP Air Filter",
+            "price" : "21.99",
+            "part_no" : "SA10957",
+            "count" : 1
+        }
+    ],
+    "subtotal" : 31.98,
+    "estimatedshipping" : 1.599,
+    "totalPurchase" : 33.579,
+    "userName" : "abdansari",
+    "orderTime" : "April 29, 2019 4:13 AM"
+}
+
+/* 14 */
+{
+    "_id" : ObjectId("5cc7a5f840f7af73e46b3a46"),
+    "items" : [ 
+        {
+            "name" : "Dorman Air Filter Box",
+            "price" : "99.99",
+            "part_no" : "258-514",
+            "count" : 2
+        }, 
+        {
+            "name" : "STP Air Filter",
+            "price" : "21.99",
+            "part_no" : "SA10957",
+            "count" : 3
+        }, 
+        {
+            "name" : "Dorman Axle Bolt",
+            "price" : "35.99",
+            "part_no" : "615-007",
+            "count" : 1
+        }
+    ],
+    "subtotal" : 301.94,
+    "estimatedshipping" : 15.097,
+    "totalPurchase" : 317.037,
+    "userName" : "deb",
+    "orderTime" : "April 29, 2019 8:33 PM"
+}
+
+/* 15 */
+{
+    "_id" : ObjectId("5cc7e1ab5a7c438b1c610a30"),
+    "items" : [ 
+        {
+            "name" : "Duralast Gold New Distributor",
+            "price" : "129.99",
+            "part_no" : "BDLG-GM04",
+            "count" : 1
+        }
+    ],
+    "subtotal" : 129.99,
+    "estimatedshipping" : 6.4995,
+    "totalPurchase" : 136.4895,
+    "userName" : "user1",
+    "orderTime" : "April 30, 2019 12:48 AM"
+}
+
+/* 16 */
+{
+    "_id" : ObjectId("5cc9ab7463cd4dbfbc2dda30"),
+    "items" : [ 
+        {
+            "name" : "STP Air Filter",
+            "price" : "21.99",
+            "part_no" : "SA10957",
+            "count" : 1
+        }
+    ],
+    "subtotal" : 21.99,
+    "estimatedshipping" : 1.0995,
+    "totalPurchase" : 23.0895,
+    "userName" : "abdansari",
+    "orderTime" : "May 1, 2019 9:21 AM"
+}
+
+/* 17 */
+{
+    "_id" : ObjectId("5cc9c315d412fcbe74b457d5"),
+    "items" : [ 
+        {
+            "name" : "Duralast Battery Cable",
+            "price" : "7.99",
+            "part_no" : "DS425B",
+            "count" : 1
+        }, 
+        {
+            "name" : "Duralast ABS Deceleration Sensor",
+            "price" : "391.99",
+            "part_no" : "SU15030",
+            "count" : 1
+        }
+    ],
+    "subtotal" : 399.98,
+    "estimatedshipping" : 19.999,
+    "totalPurchase" : 419.979,
+    "userName" : "abdansari",
+    "orderTime" : "May 1, 2019 11:02 AM"
+}
