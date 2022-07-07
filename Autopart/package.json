@@ -19,7 +19,7 @@
     "cookie-parser": "^1.4.0",
     "debug": "^2.2.0",
     "express": "^4.14.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "mongoose": "^5.7.5",
     "monk": "^6.0.6",
     "morgan": "^1.7.0",
